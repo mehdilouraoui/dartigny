@@ -49,24 +49,37 @@ const Home: NextPage = () => {
 
         tick();
     }, []);
+    const style = {
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    };
+
     return (
-        <div className="container">
-            <div id="logo">
-                <img src="/logo.png" alt="logo" />
-            </div>
-            <div className="counter">
-                <small></small>
-                <small></small>
-                <small></small>
-                <div className="bulle">
-                    <img src="/bulle.png" alt="" />
+        <>
+            <h1 className="visit" style={style}>
+                Visitez ce site sur mobile pour participer au jeu !
+            </h1>
+            <div className="container">
+                <div id="logo">
+                    <img src="/logo.png" alt="logo" />
                 </div>
-                <h2>
-                    Rentrez le code sur le cadenas du coffret mystère et
-                    découvrez si vous êtes le gagnant de notre lot !
-                </h2>
+                <div className="counter">
+                    <small></small>
+                    <small></small>
+                    <small></small>
+                    <div className="bulle">
+                        <img src="/bulle.png" alt="" />
+                    </div>
+                    <h2>
+                        Rentrez le code sur le cadenas du coffret mystère et
+                        découvrez si vous êtes le gagnant de notre lot !
+                    </h2>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

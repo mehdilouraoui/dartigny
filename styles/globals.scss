@@ -33,6 +33,26 @@ a {
   box-sizing: border-box;
 }
 
+@include media('>phone') {
+  .visit {
+    display: flex;
+  }
+
+  .container {
+    display: none;
+  }
+}
+
+@include media('<phone') {
+  .container {
+    display: block;
+  }
+
+  .visit {
+    display: none !important;
+  }
+}
+
 .container {
   height: 100vh;
   height: calc(var(--vh) * 80);
